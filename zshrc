@@ -1,5 +1,9 @@
 eval "$(starship init zsh)"
-eval "$(anyenv init -)"
+
+# asdf
+if [ -e ~/.asdf/asdf.sh ]; then
+  . ~/.asdf/asdf.sh
+fi
 
 # ghq
 alias repos='ghq list -p | peco'
